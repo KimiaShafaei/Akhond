@@ -18,6 +18,13 @@ public class PlayerMovement : MonoBehaviour
     private InputActionReference jump_action;
     [SerializeField]
     private float jump_force = 5f;
+
+    [SerializeField]
+    private InputActionReference interact_action;
+    [SerializeField]
+    private float interact_range = 1.5f;
+    private bool is_ground = false;
+
     // Start is called once before the first execution of Update after the MonoBehaviour is created
     void Start()
     {
@@ -37,6 +44,11 @@ public class PlayerMovement : MonoBehaviour
         {
             Jump();
         }
+
+        if (interact_action.action.WasPressedThisFrame())
+        {
+            HandleInteraction();
+        }
     }
 
     void FixedUpdate()
@@ -46,6 +58,52 @@ public class PlayerMovement : MonoBehaviour
 
     void Jump()
     {
-        player_body.linearVelocity = new Vector2(player_body.linearVelocity.x, jump_force);
+        if (is_ground)
+        {
+            player_body.linearVelocity = new Vector2(player_body.linearVelocity.x, jump_force);
+            is_ground = false;
+        }
+    }
+
+    void OnCollisionEnter2D(Collision2D collision)
+    {
+        if (collision.collider.CompareTag("Ground"))
+        {
+            is_ground = true;
+        }
+    }
+
+    void OnCollisionExit2D(Collision2D collision)
+    {
+        if (collision.collider.CompareTag("Ground"))
+        {
+            is_ground = false;
+        }
+    }
+
+    private void HandleInteraction()
+    {
+        PlayerInventory inventory = GetComponent<PlayerInventory>();
+        if (inventory == null)
+            return;
+
+        if (inventory.HasItem())
+        {
+            inventory.DropItem();
+            return;
+        }
+
+        Collider2D[] hit_colliders = Physics2D.OverlapCircleAll(transform.position, interact_range);
+        foreach (var collider in hit_colliders)
+        {
+            if (collider.CompareTag("Item"))
+            {
+                ItemPickUp item_pickup = collider.GetComponent<ItemPickUp>();
+                if (item_pickup != null && item_pickup.TryPickUp(inventory))
+                {
+                   return;
+                }
+            }
+        }
     }
 }
