@@ -1,10 +1,12 @@
+using System;
+using Unity.Mathematics;
 using UnityEngine;
 using UnityEngine.InputSystem;
 
 public class PlayerMovement : MonoBehaviour
 {
     private Rigidbody2D player_body;
-
+    private Animator player_animator;
     private Vector2 move_direction;
     
     [SerializeField]
@@ -20,12 +22,16 @@ public class PlayerMovement : MonoBehaviour
     void Start()
     {
         player_body = GetComponent<Rigidbody2D>();
+        player_animator = GetComponent<Animator>();
     }
 
     // Update is called once per frame
     void Update()
     {
         move_direction = move_action.action.ReadValue<Vector2>();
+
+        player_animator.SetFloat("MoveX", move_direction.x);
+        player_animator.SetBool("IsMoving", Mathf.Abs(move_direction.x) > 0.1f);
 
         if (jump_action.action.WasPressedThisFrame())
         {
