@@ -23,7 +23,9 @@ public class PlayerMovement : MonoBehaviour
     private InputActionReference interact_action;
     [SerializeField]
     private float interact_range = 1.5f;
+    private float last_face_direction = 1f;
     private bool is_ground = false;
+
 
     // Start is called once before the first execution of Update after the MonoBehaviour is created
     void Start()
@@ -36,6 +38,11 @@ public class PlayerMovement : MonoBehaviour
     void Update()
     {
         move_direction = move_action.action.ReadValue<Vector2>();
+
+        if (move_direction.x != 0)
+        {
+            last_face_direction = move_direction.x;
+        }
 
         player_animator.SetFloat("MoveX", move_direction.x);
         player_animator.SetBool("IsMoving", Mathf.Abs(move_direction.x) > 0.1f);
@@ -127,6 +134,10 @@ public class PlayerMovement : MonoBehaviour
         }
     }
 
+    public float GetLastFaceDirection()
+    {
+        return last_face_direction;
+    }
     public bool IsGround()
     {
         return is_ground;
