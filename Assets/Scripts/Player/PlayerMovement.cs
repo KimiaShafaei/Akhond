@@ -127,7 +127,7 @@ public class PlayerMovement : MonoBehaviour
                     {
                         if (shrine.TryOfferItem(inventory.GetCurrentItem()))
                         {
-                            inventory.DropItem();
+                            inventory.OfferItem();
                             return;
                         }
                         else

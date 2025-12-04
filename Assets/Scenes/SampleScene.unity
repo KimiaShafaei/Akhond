@@ -1044,6 +1044,10 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 3563267877250763950, guid: f0bbe274f547d4398a0e72d823016003, type: 3}
+      propertyPath: toggle_time
+      value: 3
+      objectReference: {fileID: 0}
     - target: {fileID: 6541160279877553718, guid: f0bbe274f547d4398a0e72d823016003, type: 3}
       propertyPath: m_LocalPosition.x
       value: -2.06

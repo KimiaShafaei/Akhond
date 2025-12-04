@@ -61,6 +61,18 @@ public class PlayerInventory : MonoBehaviour
         carried_item_object = null;
     }
 
+    public void OfferItem()
+    {
+        if (carried_item_object == null)
+        {
+            return;
+        }
+
+        Destroy(carried_item_object);
+        current_item = null;
+        carried_item_object = null;
+    }
+    
     public ItemDefinition GetCurrentItem()
     {
         return current_item;
