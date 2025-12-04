@@ -87,13 +87,33 @@ public class PlayerMovement : MonoBehaviour
         if (inventory == null)
             return;
 
+        Collider2D[] hit_colliders = Physics2D.OverlapCircleAll(transform.position, interact_range);
+
         if (inventory.HasItem())
         {
+            foreach (var collider in hit_colliders)
+            {
+                if (collider.CompareTag("Shrine"))
+                {
+                    Shrine shrine = collider.GetComponent<Shrine>();
+                    if (shrine != null)
+                    {
+                        if (shrine.TryOfferItem(inventory.GetCurrentItem()))
+                        {
+                            inventory.DropItem();
+                            return;
+                        }
+                        else
+                        {
+                            return;
+                        }
+                    }
+                }
+            }
             inventory.DropItem();
             return;
         }
 
-        Collider2D[] hit_colliders = Physics2D.OverlapCircleAll(transform.position, interact_range);
         foreach (var collider in hit_colliders)
         {
             if (collider.CompareTag("Item"))
@@ -105,5 +125,10 @@ public class PlayerMovement : MonoBehaviour
                 }
             }
         }
+    }
+
+    public bool IsGround()
+    {
+        return is_ground;
     }
 }

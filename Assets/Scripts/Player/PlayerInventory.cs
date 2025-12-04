@@ -1,3 +1,4 @@
+using Mono.Cecil.Cil;
 using UnityEngine;
 
 public class PlayerInventory : MonoBehaviour
@@ -10,6 +11,13 @@ public class PlayerInventory : MonoBehaviour
 
     private ItemDefinition current_item;
     private GameObject carried_item_object;
+
+    private PlayerMovement player_movement;
+
+    void Start()
+    {
+        player_movement = GetComponent<PlayerMovement>();
+    }
 
     public bool HasItem() => current_item != null;    
 
@@ -30,6 +38,12 @@ public class PlayerInventory : MonoBehaviour
 
     public void DropItem()
     {
+
+        if (player_movement.IsGround() == false)
+        {
+            return;
+        }
+
         if (current_item == null)
             return;
 
@@ -43,5 +57,10 @@ public class PlayerInventory : MonoBehaviour
 
         current_item = null;
         carried_item_object = null;
+    }
+
+    public ItemDefinition GetCurrentItem()
+    {
+        return current_item;
     }
 }

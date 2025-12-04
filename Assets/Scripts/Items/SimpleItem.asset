@@ -12,6 +12,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: b81f6a52a08f8491287dda36e989eb8f, type: 3}
   m_Name: SimpleItem
   m_EditorClassIdentifier: Assembly-CSharp::ItemDefinition
-  item_name: 
+  item_name: stone
   item_description: 
-  world_sprite: {fileID: -1449445930831385837, guid: a7e251df874084deb848ffa3a34b6cd9, type: 3}
+  world_sprite: {fileID: 7482667652216324306, guid: 311925a002f4447b3a28927169b83ea6, type: 3}
+  Accept_by_shrine_name: ' Forest Shrine'
