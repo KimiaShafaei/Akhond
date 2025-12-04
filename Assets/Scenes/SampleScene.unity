@@ -1015,6 +1015,14 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 3901321499305675345, guid: 86ae59246d7ec4ec39b4c0fe599908b6, type: 3}
+      propertyPath: max_jumps
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 3901321499305675345, guid: 86ae59246d7ec4ec39b4c0fe599908b6, type: 3}
+      propertyPath: restart_level
+      value: 
+      objectReference: {fileID: -542061377069716991, guid: 2bcd2660ca9b64942af0de543d8d7100, type: 3}
     - target: {fileID: 5158016706073263896, guid: 86ae59246d7ec4ec39b4c0fe599908b6, type: 3}
       propertyPath: m_Name
       value: Player

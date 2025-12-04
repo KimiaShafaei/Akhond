@@ -2,6 +2,7 @@ using System;
 using Unity.Mathematics;
 using UnityEngine;
 using UnityEngine.InputSystem;
+using UnityEngine.SceneManagement;
 
 public class PlayerMovement : MonoBehaviour
 {
@@ -23,8 +24,15 @@ public class PlayerMovement : MonoBehaviour
     private InputActionReference interact_action;
     [SerializeField]
     private float interact_range = 1.5f;
+
+    [SerializeField]
+    private InputActionReference restart_level;
     private float last_face_direction = 1f;
     private bool is_ground = false;
+
+    [SerializeField]
+    private int max_jumps = 1;
+    private int jump_count = 0;
 
 
     // Start is called once before the first execution of Update after the MonoBehaviour is created
@@ -56,6 +64,11 @@ public class PlayerMovement : MonoBehaviour
         {
             HandleInteraction();
         }
+
+        if(restart_level.action.WasPressedThisFrame())
+        {
+            RestartLevel();
+        }
     }
 
     void FixedUpdate()
@@ -68,7 +81,13 @@ public class PlayerMovement : MonoBehaviour
         if (is_ground)
         {
             player_body.linearVelocity = new Vector2(player_body.linearVelocity.x, jump_force);
+            jump_count = 1;
             is_ground = false;
+        }
+        else if (jump_count < max_jumps)
+        {
+            player_body.linearVelocity = new Vector2(player_body.linearVelocity.x, jump_force);
+            jump_count += 1;
         }
     }
 
@@ -77,6 +96,7 @@ public class PlayerMovement : MonoBehaviour
         if (collision.collider.CompareTag("Ground"))
         {
             is_ground = true;
+            jump_count = 0;
         }
     }
 
@@ -141,5 +161,10 @@ public class PlayerMovement : MonoBehaviour
     public bool IsGround()
     {
         return is_ground;
+    }
+
+    private void RestartLevel()
+    {
+        SceneManager.LoadScene(SceneManager.GetActiveScene().name);
     }
 }
