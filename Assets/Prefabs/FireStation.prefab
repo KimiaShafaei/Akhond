@@ -166,7 +166,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::FireStation
   animator: {fileID: 3846288626013103364}
-  toggle_time: 5
+  toggle_time: 3
 --- !u!61 &1925156582941525330
 BoxCollider2D:
   m_ObjectHideFlags: 0

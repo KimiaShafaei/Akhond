@@ -290,7 +290,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::Shrine
   shrine_name: ' Forest Shrine'
-  door_object: {fileID: 1139689665421365409}
+  door_object: {fileID: 7727366561596884852}
   star_object: {fileID: 3671217793975727685}
 --- !u!114 &2388473139556782727
 MonoBehaviour:
