@@ -1,10 +1,10 @@
 fileFormatVersion: 2
-guid: 97b7ef33f523c4a4f9f9ffa8b1e0646b
+guid: 19c0b2bf884372a469b8171b4c2b0816
 TextureImporter:
   internalIDToNameTable:
   - first:
-      213: 1365539031471768751
-    second: candle_0
+      213: 3579654292444940075
+    second: shrine_with_no_door_0
   externalObjects: {}
   serializedVersion: 13
   mipmaps:
@@ -113,13 +113,13 @@ TextureImporter:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: candle_0
+      name: shrine_with_no_door_0
       rect:
         serializedVersion: 2
-        x: 9
-        y: 0
-        width: 13
-        height: 32
+        x: 2
+        y: 1
+        width: 28
+        height: 31
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -128,8 +128,8 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: -1
       bones: []
-      spriteID: fa44ec1a38e53f210800000000000000
-      internalID: 1365539031471768751
+      spriteID: b2702e7fc9c7da130800000000000000
+      internalID: 3579654292444940075
       vertices: []
       indices: 
       edges: []
@@ -148,7 +148,7 @@ TextureImporter:
     spriteCustomMetadata:
       entries: []
     nameFileIdTable:
-      candle_0: 1365539031471768751
+      shrine_with_no_door_0: 3579654292444940075
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 
