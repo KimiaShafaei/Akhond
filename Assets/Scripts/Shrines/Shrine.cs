@@ -51,15 +51,16 @@ public class Shrine : MonoBehaviour
 
         if (door_object != null)
         {
-            Animator door_animator = door_object.GetComponent<Animator>();
-            if (door_animator != null)
+            final_door door_script = door_object.GetComponent<final_door>();
+            if (door_script != null)
             {
-                door_animator.SetTrigger("Open");
-                Collider2D door_collider = door_object.GetComponent<Collider2D>();
-                if (door_collider != null)
-                {
-                    door_collider.enabled = false;
-                }
+                door_script.Open();
+            }
+
+            middle_door middle_door_script = door_object.GetComponent<middle_door>();
+            if (middle_door_script != null)
+            {
+                middle_door_script.Open();
             }
         }
 
