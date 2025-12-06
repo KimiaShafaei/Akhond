@@ -7,7 +7,8 @@ public class NewMonoBehaviourScript : MonoBehaviour
     {
         if (collision.CompareTag("Player"))
         {
-            SceneManager.LoadScene(SceneManager.GetActiveScene().name);
+            // SceneManager.LoadScene(SceneManager.GetActiveScene().name);
+            CheckPointManage.instance.ReturnPlayer(collision.gameObject);
         }
     }
 }

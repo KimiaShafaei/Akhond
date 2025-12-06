@@ -127,7 +127,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 86043ab28a1de41c388491ae4fa8b37a, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::final_door
-  scene_name: Level1
+  Next_Level_Scene: 
   open_anim_time: 2
   close_anim_time: 2
   player: {fileID: 0}
@@ -473,6 +473,7 @@ GameObject:
   - component: {fileID: 555347597939221845}
   - component: {fileID: 5684568250939187313}
   - component: {fileID: 7361550260778454569}
+  - component: {fileID: 2142226411966322100}
   m_Layer: 0
   m_Name: MiddleDoor
   m_TagString: Untagged
@@ -633,3 +634,15 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: d1ed4e69f69174483bb796dd39b97a0b, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::middle_door
+--- !u!114 &2142226411966322100
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7727366561596884852}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 0323fedc4dc3e41499141620e976f761, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::CheckPoint
