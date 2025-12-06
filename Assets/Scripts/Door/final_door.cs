@@ -5,7 +5,7 @@ using UnityEngine.SceneManagement;
 public class final_door : MonoBehaviour
 {
     [SerializeField]
-    private string scene_name;
+    private string Next_Level_Scene;
     [SerializeField]
     float open_anim_time = 2.0f;
     [SerializeField]
@@ -61,7 +61,7 @@ public class final_door : MonoBehaviour
     {
         if (collision.CompareTag("Player") && is_open == true)
         {
-            Debug.Log("Loading Scene: " + scene_name);
+            Debug.Log("Loading Scene: " + Next_Level_Scene);
             StartCoroutine(LoadScene());
         }
     }
@@ -76,6 +76,6 @@ public class final_door : MonoBehaviour
 
         yield return new WaitForSeconds(close_anim_time);
 
-        SceneManager.LoadScene(scene_name);
+        SceneManager.LoadScene(Next_Level_Scene);
     }
 }
