@@ -12,7 +12,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: b81f6a52a08f8491287dda36e989eb8f, type: 3}
   m_Name: SimpleItem
   m_EditorClassIdentifier: Assembly-CSharp::ItemDefinition
-  item_name: diamond
+  item_name: candle
   item_description: 
-  world_sprite: {fileID: 8353255750330329098, guid: 3458c81c87bead14ea7fc9e895a079da, type: 3}
-  Accept_by_shrine_name: ' Forest Shrine'
+  world_sprite: {fileID: 1365539031471768751, guid: 97b7ef33f523c4a4f9f9ffa8b1e0646b, type: 3}
+  Accept_by_shrine_name: Shrine1
