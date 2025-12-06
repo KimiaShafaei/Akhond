@@ -12,7 +12,7 @@ public class middle_door : MonoBehaviour
 
         if (door_collider != null)
         {
-            door_collider.enabled = true;
+            door_collider.isTrigger = false;
         }
     }
 
@@ -25,7 +25,7 @@ public class middle_door : MonoBehaviour
 
         if (door_collider != null)
         {
-            door_collider.enabled = false;
+            door_collider.isTrigger = true;
         }
     }
 }

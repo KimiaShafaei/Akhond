@@ -34,6 +34,12 @@ public class PlayerMovement : MonoBehaviour
     private int max_jumps = 1;
     private int jump_count = 0;
 
+    private AudioManager audioManager;
+
+    private void Awake()
+    {
+        audioManager = GameObject.FindGameObjectWithTag("Audio").GetComponent<AudioManager>();
+    }
 
     // Start is called once before the first execution of Update after the MonoBehaviour is created
     void Start()
@@ -57,6 +63,7 @@ public class PlayerMovement : MonoBehaviour
 
         if (jump_action.action.WasPressedThisFrame())
         {
+            audioManager.PlaySFX(audioManager.Jump);
             Jump();
         }
 
