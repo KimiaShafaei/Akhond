@@ -15,6 +15,7 @@ public class AudioManager : MonoBehaviour
     public AudioClip Death;
     public AudioClip ItemPickup;
     public AudioClip ShrineActivate;
+    public AudioClip NewLevel;
     public AudioClip ButtonClick;
 
     private void Start()

@@ -1,0 +1,18 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: b81f6a52a08f8491287dda36e989eb8f, type: 3}
+  m_Name: DiamondWhite
+  m_EditorClassIdentifier: Assembly-CSharp::ItemDefinition
+  item_name: DiamondWhite
+  item_description: 
+  world_sprite: {fileID: 8353255750330329098, guid: 3458c81c87bead14ea7fc9e895a079da, type: 3}
+  Accept_by_shrine_name: ShrineDiamondWhite
