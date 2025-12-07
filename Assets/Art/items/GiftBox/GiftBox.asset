@@ -10,9 +10,9 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: b81f6a52a08f8491287dda36e989eb8f, type: 3}
-  m_Name: DiamondBlack
+  m_Name: GiftBox
   m_EditorClassIdentifier: Assembly-CSharp::ItemDefinition
-  item_name: BlackDiamond
+  item_name: GiftBox
   item_description: 
-  world_sprite: {fileID: -7835129986059184153, guid: 748299d15d05c9742bf2a2732f4749c3, type: 3}
-  Accept_by_shrine_name: SrineBlackDiamond
+  world_sprite: {fileID: 8922311296163640026, guid: 1ae3b9c33a8a92e4aba5bbbd4c63d7f7, type: 3}
+  Accept_by_shrine_name: ShrineGiftBox
