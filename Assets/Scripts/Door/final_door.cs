@@ -43,20 +43,11 @@ public class final_door : MonoBehaviour
             animator.SetTrigger("Open");
         }
 
-        StartCoroutine(DisableCollider());
-        door_collider.isTrigger = true;
-    }
-
-    private IEnumerator DisableCollider()
-    {
-        yield return new WaitForSeconds(open_anim_time);
-
         if (door_collider != null)
         {
-            door_collider.enabled = false;
+            door_collider.isTrigger = true;
         }
     }
-
     private void OnTriggerEnter2D(Collider2D collision)
     {
         if (collision.CompareTag("Player") && is_open == true)

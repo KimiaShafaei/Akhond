@@ -205,9 +205,17 @@ PrefabInstance:
       propertyPath: m_Color.r
       value: 1
       objectReference: {fileID: 0}
+    - target: {fileID: 3969072514142776671, guid: a65ccf7f9cf964740a41d34ee6b65e8c, type: 3}
+      propertyPath: m_SortingLayer
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 3969072514142776671, guid: a65ccf7f9cf964740a41d34ee6b65e8c, type: 3}
+      propertyPath: m_SortingLayerID
+      value: 1011550853
+      objectReference: {fileID: 0}
     - target: {fileID: 8025896326504933425, guid: a65ccf7f9cf964740a41d34ee6b65e8c, type: 3}
       propertyPath: m_Name
-      value: Item
+      value: DiamondWhite
       objectReference: {fileID: 0}
     - target: {fileID: 8402275553740516921, guid: a65ccf7f9cf964740a41d34ee6b65e8c, type: 3}
       propertyPath: m_LocalScale.x
@@ -265,6 +273,10 @@ PrefabInstance:
       propertyPath: m_ConstrainProportionsScale
       value: 1
       objectReference: {fileID: 0}
+    - target: {fileID: 9001626344226667616, guid: a65ccf7f9cf964740a41d34ee6b65e8c, type: 3}
+      propertyPath: itemDefinition
+      value: 
+      objectReference: {fileID: 11400000, guid: 8aec95d04c6c54c6b90b8030d63b1b42, type: 2}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -401,6 +413,11 @@ PrefabInstance:
     m_AddedGameObjects: []
     m_AddedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 326b412bb96334edda0e28591f6fcae3, type: 3}
+--- !u!1 &1578736987 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 5158016706073263896, guid: 86ae59246d7ec4ec39b4c0fe599908b6, type: 3}
+  m_PrefabInstance: {fileID: 2053883311}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1001 &1637621931
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -415,11 +432,11 @@ PrefabInstance:
       objectReference: {fileID: 72448208}
     - target: {fileID: 1703534940366627767, guid: 35f0fe7f06229a744bfb7cefe0c7d373, type: 3}
       propertyPath: m_LocalPosition.x
-      value: -0.04429
+      value: -3.84
       objectReference: {fileID: 0}
     - target: {fileID: 1703534940366627767, guid: 35f0fe7f06229a744bfb7cefe0c7d373, type: 3}
       propertyPath: m_LocalPosition.y
-      value: -0.8307
+      value: -1.97
       objectReference: {fileID: 0}
     - target: {fileID: 1703534940366627767, guid: 35f0fe7f06229a744bfb7cefe0c7d373, type: 3}
       propertyPath: m_LocalPosition.z
@@ -453,6 +470,10 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 3883479581205459204, guid: 35f0fe7f06229a744bfb7cefe0c7d373, type: 3}
+      propertyPath: orthographic size
+      value: 9
+      objectReference: {fileID: 0}
     - target: {fileID: 7998254041701458761, guid: 35f0fe7f06229a744bfb7cefe0c7d373, type: 3}
       propertyPath: m_Name
       value: Main Camera
@@ -470,6 +491,14 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 596794536480174496, guid: 86ae59246d7ec4ec39b4c0fe599908b6, type: 3}
+      propertyPath: m_SortingLayer
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 596794536480174496, guid: 86ae59246d7ec4ec39b4c0fe599908b6, type: 3}
+      propertyPath: m_SortingLayerID
+      value: 1238173641
+      objectReference: {fileID: 0}
     - target: {fileID: 3330718212810020710, guid: 86ae59246d7ec4ec39b4c0fe599908b6, type: 3}
       propertyPath: m_LocalScale.x
       value: 3.8
@@ -561,7 +590,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 1881145699067384439, guid: 33e44e5d566654effadb2bd03c74186e, type: 3}
       propertyPath: m_Name
-      value: Shrine
+      value: ShrineDiamondWhite
       objectReference: {fileID: 0}
     - target: {fileID: 2511474720946841956, guid: 33e44e5d566654effadb2bd03c74186e, type: 3}
       propertyPath: m_LocalScale.x
@@ -603,6 +632,10 @@ PrefabInstance:
       propertyPath: door_object
       value: 
       objectReference: {fileID: 1248702831}
+    - target: {fileID: 5716771673885357553, guid: 33e44e5d566654effadb2bd03c74186e, type: 3}
+      propertyPath: shrine_name
+      value: ShrineDiamondWhite
+      objectReference: {fileID: 0}
     - target: {fileID: 6471108211341526202, guid: 33e44e5d566654effadb2bd03c74186e, type: 3}
       propertyPath: m_LocalScale.x
       value: 2.9
@@ -658,6 +691,14 @@ PrefabInstance:
     - target: {fileID: 6471108211341526202, guid: 33e44e5d566654effadb2bd03c74186e, type: 3}
       propertyPath: m_ConstrainProportionsScale
       value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 7350109743556099085, guid: 33e44e5d566654effadb2bd03c74186e, type: 3}
+      propertyPath: player
+      value: 
+      objectReference: {fileID: 1578736987}
+    - target: {fileID: 7350109743556099085, guid: 33e44e5d566654effadb2bd03c74186e, type: 3}
+      propertyPath: Next_Level_Scene
+      value: Level2
       objectReference: {fileID: 0}
     - target: {fileID: 7727366561596884852, guid: 33e44e5d566654effadb2bd03c74186e, type: 3}
       propertyPath: m_IsActive
