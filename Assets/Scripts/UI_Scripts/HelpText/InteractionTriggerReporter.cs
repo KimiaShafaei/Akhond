@@ -3,7 +3,6 @@ using UnityEngine;
 public class InteractionTriggerReporter : MonoBehaviour
 {
     [Header("Reporter Type")]
-    // تعیین می کند که این تریگر مربوط به باکس است یا Shrine
     public bool isBoxTrigger = true; 
     
     private PlayerInteractionManager playerManager;

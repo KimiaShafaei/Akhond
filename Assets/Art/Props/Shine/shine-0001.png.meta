@@ -1,10 +1,16 @@
 fileFormatVersion: 2
-guid: 4f6205f52beef3b48a8ba58198a568e2
+guid: 32def83cd59941140a3a884a29fd9699
 TextureImporter:
   internalIDToNameTable:
   - first:
-      213: -6271062316689911650
-    second: shine-0002_0
+      213: -7201369289996885561
+    second: shine-0001_0
+  - first:
+      213: 6106793851583662398
+    second: shine-0001_1
+  - first:
+      213: -148859093264377901
+    second: shine-0001_2
   externalObjects: {}
   serializedVersion: 13
   mipmaps:
@@ -113,23 +119,67 @@ TextureImporter:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: shine-0002_0
+      name: shine-0001_0
       rect:
         serializedVersion: 2
-        x: 3
-        y: 7
-        width: 27
-        height: 21
+        x: 1
+        y: 1
+        width: 31
+        height: 30
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
       physicsShape: []
       tessellationDetail: -1
       bones: []
-      spriteID: e901c596c06b8f8a0800000000000000
-      internalID: -6271062316689911650
+      spriteID: 7c1245509c89f0c90800000000000000
+      internalID: -7201369289996885561
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: shine-0001_1
+      rect:
+        serializedVersion: 2
+        x: 4
+        y: 5
+        width: 23
+        height: 25
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: e390f2027a0bfb450800000000000000
+      internalID: 6106793851583662398
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: shine-0001_2
+      rect:
+        serializedVersion: 2
+        x: 25
+        y: 9
+        width: 7
+        height: 7
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 3d7d36081752fedf0800000000000000
+      internalID: -148859093264377901
       vertices: []
       indices: 
       edges: []
@@ -138,7 +188,7 @@ TextureImporter:
     customData: 
     physicsShape: []
     bones: []
-    spriteID: 
+    spriteID: 751fccb3f0d1a4d14a2903b22fd4f0b8
     internalID: 0
     vertices: []
     indices: 
@@ -148,7 +198,9 @@ TextureImporter:
     spriteCustomMetadata:
       entries: []
     nameFileIdTable:
-      shine-0002_0: -6271062316689911650
+      shine-0001_0: -7201369289996885561
+      shine-0001_1: 6106793851583662398
+      shine-0001_2: -148859093264377901
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 
