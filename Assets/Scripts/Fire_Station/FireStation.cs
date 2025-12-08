@@ -9,6 +9,12 @@ public class FireStation : MonoBehaviour
     [SerializeField]
     private float toggle_time = 2f;
     private bool is_on = false;
+    AudioManager audioManager;
+
+    private void Awake()
+    {
+        audioManager = GameObject.FindGameObjectWithTag("Audio").GetComponent<AudioManager>();
+    }
 
     // Start is called once before the first execution of Update after the MonoBehaviour is created
     void Start()
@@ -40,7 +46,8 @@ public class FireStation : MonoBehaviour
 
         if (collision.CompareTag("Player"))
         {
-            SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex);
+            audioManager.PlaySFX(audioManager.Death);
+            SceneManager.LoadScene(SceneManager.GetActiveScene().name);
         }
     }
 }
