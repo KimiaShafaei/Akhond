@@ -81,10 +81,16 @@ public class PlayerMovement : MonoBehaviour
     void FixedUpdate()
     {
         player_body.linearVelocity = new Vector2(move_direction.x * move_speed, player_body.linearVelocity.y);
+        if (Mathf.Abs(player_body.linearVelocity.y) < 0.1f && !is_ground)
+        {
+            is_ground = true;
+            jump_count = 0;
+        }
     }
 
     void Jump()
     {
+        Debug.Log("is ground: " + is_ground + " jump_count: " + jump_count);
         if (is_ground)
         {
             player_body.linearVelocity = new Vector2(player_body.linearVelocity.x, jump_force);

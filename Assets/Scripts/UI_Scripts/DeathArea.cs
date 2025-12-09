@@ -15,6 +15,7 @@ public class NewMonoBehaviourScript : MonoBehaviour
         if (collision.CompareTag("Player"))
         {
             audioManager.PlaySFX(audioManager.Death);
+            CameraShake.instance.ShakeCamera(0.55f, 0.6f);
             CheckPointManage.instance.ReturnPlayer(collision.gameObject);
         }
     }

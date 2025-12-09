@@ -1,3 +1,4 @@
+using System.Collections;
 using Unity.VisualScripting;
 using UnityEngine;
 using UnityEngine.SceneManagement;
@@ -46,8 +47,16 @@ public class FireStation : MonoBehaviour
 
         if (collision.CompareTag("Player"))
         {
-            audioManager.PlaySFX(audioManager.Death);
-            SceneManager.LoadScene(SceneManager.GetActiveScene().name);
+            StartCoroutine(DeathRoutine());
         }
+    }
+
+    private IEnumerator DeathRoutine()
+    {
+        audioManager.PlaySFX(audioManager.Death);
+            CameraShake.instance.ShakeCamera(0.55f, 0.6f);
+            yield return new WaitForSeconds(0.5f);
+            SceneManager.LoadScene(SceneManager.GetActiveScene().name);
+            Story.story_shown = true;
     }
 }

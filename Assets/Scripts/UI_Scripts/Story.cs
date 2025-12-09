@@ -5,21 +5,34 @@ public class Story : MonoBehaviour
 {
     public GameObject Story_BG;
     public GameObject Reward_BG;
+
+    public static bool story_shown = false;
     
     // Start is called once before the first execution of Update after the MonoBehaviour is created
     void Start()
     {
-        Time.timeScale = 0;
-        if (Reward_BG != null)
+        if (story_shown == false)
         {
-            Reward_BG.SetActive(true);
-            Story_BG.SetActive(false);
+            Time.timeScale = 0;
+            if (Reward_BG != null)
+            {
+                Reward_BG.SetActive(true);
+                Story_BG.SetActive(false);
+            }
+            else
+            {
+                ShowStory();
+            }
         }
         else
         {
-            ShowStory();
+            Time.timeScale = 1;
+            if (Reward_BG != null)
+            {
+                Reward_BG.SetActive(false);
+            }
+            Story_BG.SetActive(false);
         }
-        
     }
 
     void ShowStory()
