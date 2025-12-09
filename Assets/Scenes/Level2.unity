@@ -3262,6 +3262,10 @@ PrefabInstance:
       propertyPath: Loop
       value: 1
       objectReference: {fileID: 0}
+    - target: {fileID: 4617082227215252366, guid: b5c4cf558e9a44bf5a15526739e7c427, type: 3}
+      propertyPath: m_Volume
+      value: 0.7
+      objectReference: {fileID: 0}
     - target: {fileID: 7789728402704968713, guid: b5c4cf558e9a44bf5a15526739e7c427, type: 3}
       propertyPath: m_Name
       value: Audio Manager
@@ -3273,11 +3277,11 @@ PrefabInstance:
     - target: {fileID: 8769216785937829743, guid: b5c4cf558e9a44bf5a15526739e7c427, type: 3}
       propertyPath: Jump
       value: 
-      objectReference: {fileID: 8300000, guid: 6d9e4f128956841c4be9e5325aa044b4, type: 3}
+      objectReference: {fileID: 8300000, guid: 1fca2202c58b6481c8b4ce44811956c9, type: 3}
     - target: {fileID: 8769216785937829743, guid: b5c4cf558e9a44bf5a15526739e7c427, type: 3}
       propertyPath: Death
       value: 
-      objectReference: {fileID: 8300000, guid: 3d09a053dbb1f4cf3871dc1c5426d18e, type: 3}
+      objectReference: {fileID: 8300000, guid: 8dfb4402ba8344fb48f5b9935ba72346, type: 3}
     - target: {fileID: 8769216785937829743, guid: b5c4cf558e9a44bf5a15526739e7c427, type: 3}
       propertyPath: ButtonUI
       value: 
