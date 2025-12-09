@@ -51,7 +51,7 @@ public class FireStation : MonoBehaviour
         }
     }
 
-    private IEnumerator DeathRoutine()
+    public IEnumerator DeathRoutine()
     {
         audioManager.PlaySFX(audioManager.Death);
             CameraShake.instance.ShakeCamera(0.55f, 0.6f);
