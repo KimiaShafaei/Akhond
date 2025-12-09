@@ -7,6 +7,13 @@ public class Story : MonoBehaviour
     public GameObject Reward_BG;
 
     public static bool story_shown = false;
+
+    AudioManager audioManager;
+
+    private void Awake()
+    {
+        audioManager = GameObject.FindGameObjectWithTag("Audio").GetComponent<AudioManager>();
+    }
     
     // Start is called once before the first execution of Update after the MonoBehaviour is created
     void Start()
@@ -42,12 +49,14 @@ public class Story : MonoBehaviour
     public void CloseReward()
     {
         Reward_BG.SetActive(false);
+        audioManager.PlaySFX(audioManager.ButtonUI);
         ShowStory();
     }
 
     public void CloseStory()
     {
         Story_BG.SetActive(false);
+        audioManager.PlaySFX(audioManager.ButtonUI);
         Time.timeScale = 1;
     }
 }

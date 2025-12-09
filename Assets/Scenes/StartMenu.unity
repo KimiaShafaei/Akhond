@@ -1040,7 +1040,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_Sprite: {fileID: -433532379240577093, guid: 5d79c6149a8b8f942ac4e43a17cc4bf1, type: 3}
+  m_Sprite: {fileID: 2199012484060503370, guid: 20e4b3290c82e9b48b83edf302a27625, type: 3}
   m_Type: 0
   m_PreserveAspect: 0
   m_FillCenter: 1
@@ -1173,7 +1173,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_Sprite: {fileID: -433532379240577093, guid: 5d79c6149a8b8f942ac4e43a17cc4bf1, type: 3}
+  m_Sprite: {fileID: 2199012484060503370, guid: 20e4b3290c82e9b48b83edf302a27625, type: 3}
   m_Type: 0
   m_PreserveAspect: 0
   m_FillCenter: 1
@@ -1599,7 +1599,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_Sprite: {fileID: -433532379240577093, guid: 5d79c6149a8b8f942ac4e43a17cc4bf1, type: 3}
+  m_Sprite: {fileID: 2199012484060503370, guid: 20e4b3290c82e9b48b83edf302a27625, type: 3}
   m_Type: 0
   m_PreserveAspect: 0
   m_FillCenter: 1
@@ -1674,9 +1674,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: 'Offer Game
-
-'
+  m_text: Shrine Bound
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: 26bb0887d0ebe415d8910b1b74381b50, type: 2}
   m_sharedMaterial: {fileID: -5111186563900879004, guid: 26bb0887d0ebe415d8910b1b74381b50, type: 2}
@@ -1709,7 +1707,7 @@ MonoBehaviour:
   m_enableAutoSizing: 0
   m_fontSizeMin: 18
   m_fontSizeMax: 72
-  m_fontStyle: 0
+  m_fontStyle: 16
   m_HorizontalAlignment: 2
   m_VerticalAlignment: 512
   m_textAlignment: 65535

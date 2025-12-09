@@ -17,7 +17,7 @@ public class StartMenu : MonoBehaviour
 
     public void OnCreditsClick()
     {
-        SceneManager.LoadScene("Credits");
+        SceneManager.LoadScene("Credit");
         audioManager.PlaySFX(audioManager.ButtonUI);
     }
     public void OnExitClick()
