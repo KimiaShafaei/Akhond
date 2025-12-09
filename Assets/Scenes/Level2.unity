@@ -733,6 +733,38 @@ PrefabInstance:
       propertyPath: m_Name
       value: Music
       objectReference: {fileID: 0}
+    - target: {fileID: 8769216785937829743, guid: b5c4cf558e9a44bf5a15526739e7c427, type: 3}
+      propertyPath: Jump
+      value: 
+      objectReference: {fileID: 8300000, guid: 6d9e4f128956841c4be9e5325aa044b4, type: 3}
+    - target: {fileID: 8769216785937829743, guid: b5c4cf558e9a44bf5a15526739e7c427, type: 3}
+      propertyPath: Death
+      value: 
+      objectReference: {fileID: 8300000, guid: 3d09a053dbb1f4cf3871dc1c5426d18e, type: 3}
+    - target: {fileID: 8769216785937829743, guid: b5c4cf558e9a44bf5a15526739e7c427, type: 3}
+      propertyPath: ButtonUI
+      value: 
+      objectReference: {fileID: 8300000, guid: ab07b42a3ef884bc38e535955ab89e13, type: 3}
+    - target: {fileID: 8769216785937829743, guid: b5c4cf558e9a44bf5a15526739e7c427, type: 3}
+      propertyPath: FinalDoor
+      value: 
+      objectReference: {fileID: 8300000, guid: ca4467dac84734aab94b7d85b19b01e6, type: 3}
+    - target: {fileID: 8769216785937829743, guid: b5c4cf558e9a44bf5a15526739e7c427, type: 3}
+      propertyPath: ItemPickup
+      value: 
+      objectReference: {fileID: 8300000, guid: 8d2111d23170245acbb307c57bf488d2, type: 3}
+    - target: {fileID: 8769216785937829743, guid: b5c4cf558e9a44bf5a15526739e7c427, type: 3}
+      propertyPath: ShrineActivate
+      value: 
+      objectReference: {fileID: 8300000, guid: 01e1941f4a40045c1a1c55f8eeacef0f, type: 3}
+    - target: {fileID: 8769216785937829743, guid: b5c4cf558e9a44bf5a15526739e7c427, type: 3}
+      propertyPath: BackgroundMusic
+      value: 
+      objectReference: {fileID: 8300000, guid: 87b28e9ef39e94cdcb35bfc274726c04, type: 3}
+    - target: {fileID: 8769216785937829743, guid: b5c4cf558e9a44bf5a15526739e7c427, type: 3}
+      propertyPath: ButtonActivatePower
+      value: 
+      objectReference: {fileID: 8300000, guid: e1afbdbfe33194d29bcad66c43762485, type: 3}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []

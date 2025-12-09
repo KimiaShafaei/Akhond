@@ -15,9 +15,14 @@ public class AudioManager : MonoBehaviour
     public AudioClip Death;
     public AudioClip ItemPickup;
     public AudioClip ShrineActivate;
-    public AudioClip NewLevel;
-    public AudioClip ButtonClick;
+    public AudioClip FinalDoor;
+    public AudioClip ButtonActivatePower;
+    public AudioClip ButtonUI;
 
+private void Awake()
+{
+    DontDestroyOnLoad(gameObject);
+}
     private void Start()
     {
         MusicSource.clip = BackgroundMusic;
@@ -27,5 +32,10 @@ public class AudioManager : MonoBehaviour
     public void PlaySFX(AudioClip clip)
     {
         SFXSource.PlayOneShot(clip);
+    }
+
+    public void StopBackgroundMusic()
+    {
+        MusicSource.Stop();
     }
 }

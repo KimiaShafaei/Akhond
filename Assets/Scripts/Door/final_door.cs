@@ -9,7 +9,7 @@ public class final_door : MonoBehaviour
     [SerializeField]
     float open_anim_time = 2.0f;
     [SerializeField]
-    float close_anim_time = 2.0f;
+    float close_anim_time = 5.0f;
 
     private Animator animator;
     private Collider2D door_collider;
@@ -17,6 +17,14 @@ public class final_door : MonoBehaviour
     public GameObject player;
 
     private bool is_open = false;
+
+    AudioManager audioManager;
+
+    private void Awake()
+    {
+        audioManager = GameObject.FindGameObjectWithTag("Audio").GetComponent<AudioManager>();
+    }
+
     // Start is called once before the first execution of Update after the MonoBehaviour is created
     void Start()
     {
@@ -63,9 +71,11 @@ public class final_door : MonoBehaviour
         {
             player.SetActive(false);
             animator.SetTrigger("Close");
+            audioManager.StopBackgroundMusic();
+            audioManager.PlaySFX(audioManager.FinalDoor);
+            yield return new WaitForSeconds(close_anim_time);
         }
 
-        yield return new WaitForSeconds(close_anim_time);
 
         SceneManager.LoadScene(Next_Level_Scene);
     }

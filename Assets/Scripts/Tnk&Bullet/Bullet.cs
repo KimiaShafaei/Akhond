@@ -9,6 +9,11 @@ public class Bullet : MonoBehaviour
     public float maxLifeTime = 5f; 
     AudioManager audioManager;
 
+    void Awake()
+    {
+        audioManager = GameObject.FindGameObjectWithTag("Audio").GetComponent<AudioManager>();
+    }
+
     void Start()
 {
     Rigidbody2D rb = GetComponent<Rigidbody2D>(); 
@@ -28,23 +33,21 @@ public class Bullet : MonoBehaviour
         if (otherObject.CompareTag("Player"))
         {
             StartCoroutine(DeathRoutine());
-            Debug.LogError("ok bargasht");
         }
-        
-        Destroy(gameObject); 
+        else
+        {
+            Destroy(gameObject);
+        }
     }
 
     public IEnumerator DeathRoutine()
     {
         audioManager.PlaySFX(audioManager.Death);
-        Debug.LogError("audio");
-            CameraShake.instance.ShakeCamera(0.55f, 0.6f);
-            Debug.LogError("camera shake");
-            yield return new WaitForSeconds(0.5f);
-            Debug.LogError("nemidonam");
-            SceneManager.LoadScene(SceneManager.GetActiveScene().name);
-            Debug.LogError("scene manager");
-            Story.story_shown = true;
-            Debug.LogError("story");
+        CameraShake.instance.ShakeCamera(0.55f, 0.6f);
+        yield return new WaitForSeconds(0.5f);
+        SceneManager.LoadScene(SceneManager.GetActiveScene().name);
+        Story.story_shown = true;
+        Destroy(gameObject);
+
     }
 }

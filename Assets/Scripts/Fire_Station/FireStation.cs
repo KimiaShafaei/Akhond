@@ -54,9 +54,9 @@ public class FireStation : MonoBehaviour
     public IEnumerator DeathRoutine()
     {
         audioManager.PlaySFX(audioManager.Death);
-            CameraShake.instance.ShakeCamera(0.55f, 0.6f);
-            yield return new WaitForSeconds(0.5f);
-            SceneManager.LoadScene(SceneManager.GetActiveScene().name);
-            Story.story_shown = true;
+        CameraShake.instance.ShakeCamera(0.55f, 0.6f);
+        yield return new WaitForSeconds(0.5f);
+        SceneManager.LoadScene(SceneManager.GetActiveScene().name);
+        Story.story_shown = true;
     }
 }
