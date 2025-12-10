@@ -61,6 +61,6 @@ public class DinosaurMovement : MonoBehaviour
         CameraShake.instance.ShakeCamera(0.55f, 0.6f);
         yield return new WaitForSeconds(0.5f);
         SceneManager.LoadScene(SceneManager.GetActiveScene().name);
-        Story.story_shown = true;
+        // Story.story_shown = true;
     }
 }

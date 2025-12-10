@@ -36,7 +36,7 @@ public class PouseMenu : MonoBehaviour
         audioManager.PlaySFX(audioManager.ButtonUI);
         Time.timeScale = 1f;
         SceneManager.LoadScene(SceneManager.GetActiveScene().name);
-        Story.story_shown = true;
+        // Story.story_shown = true;
     }
     
 }
