@@ -11,6 +11,8 @@ public class StartMenu : MonoBehaviour
     }
     public void OnStartClick()
     {
+        ResetStories();
+        PlayerPrefs.DeleteKey("StoryShown_Level1");
         SceneManager.LoadScene("Level1");
         audioManager.PlaySFX(audioManager.ButtonUI);
     }
@@ -24,5 +26,11 @@ public class StartMenu : MonoBehaviour
     {
         Application.Quit();
         audioManager.PlaySFX(audioManager.ButtonUI);
+    }
+    void ResetStories()
+    {
+        PlayerPrefs.DeleteKey("StoryShown_Level1");
+        PlayerPrefs.DeleteKey("StoryShown_Level2");
+        PlayerPrefs.DeleteKey("StoryShown_Level3");
     }
 }
