@@ -89,7 +89,7 @@ public class PlayerMovement : MonoBehaviour
 
     void Jump()
     {
-        // Debug.Log("is ground: " + is_ground + " jump_count: " + jump_count);
+        Debug.Log("is ground: " + is_ground + " jump_count: " + jump_count);
         if (is_ground)
         {
             player_body.linearVelocity = new Vector2(player_body.linearVelocity.x, jump_force);
@@ -102,6 +102,17 @@ public class PlayerMovement : MonoBehaviour
             player_body.linearVelocity = new Vector2(player_body.linearVelocity.x, jump_force);
             audioManager.PlaySFX(audioManager.Jump);
             jump_count += 1;
+        }
+
+        if (player_body.linearVelocity.y < 0.01f && !is_ground)
+        {
+            is_ground = true;
+            jump_count = 0;
+        }
+
+        if (is_ground && jump_count >= max_jumps)
+        {
+            jump_count = 0;
         }
     }
 
