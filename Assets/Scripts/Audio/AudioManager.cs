@@ -1,5 +1,6 @@
 using UnityEngine;
 using UnityEngine.Rendering.Universal;
+using UnityEngine.SceneManagement;
 
 public class AudioManager : MonoBehaviour
 {
@@ -22,6 +23,7 @@ public class AudioManager : MonoBehaviour
 private void Awake()
 {
     DontDestroyOnLoad(gameObject);
+    SceneManager.sceneLoaded += OnSceneLoaded;
 }
     private void Start()
     {
@@ -37,5 +39,14 @@ private void Awake()
     public void StopBackgroundMusic()
     {
         MusicSource.Stop();
+    }
+
+    private void OnSceneLoaded(Scene scene, LoadSceneMode mode)
+    {
+        if (scene.name == "StartMenu")
+        {
+            StopBackgroundMusic();
+        }
+        
     }
 }
