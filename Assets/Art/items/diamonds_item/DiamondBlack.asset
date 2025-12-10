@@ -15,4 +15,4 @@ MonoBehaviour:
   item_name: BlackDiamond
   item_description: 
   world_sprite: {fileID: -7835129986059184153, guid: 748299d15d05c9742bf2a2732f4749c3, type: 3}
-  Accept_by_shrine_name: ShrineDiamondBlack
+  Accept_by_shrine_name: SrineBlackDiamond

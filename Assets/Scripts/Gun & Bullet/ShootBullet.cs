@@ -2,7 +2,7 @@ using System.Collections;
 using Unity.VisualScripting;
 using UnityEngine;
 using UnityEngine.SceneManagement;
-public class DinosaurMovement : MonoBehaviour
+public class ShootBullet : MonoBehaviour
 {
     public Vector3 pointA;
     public Vector3 pointB;
@@ -10,8 +10,8 @@ public class DinosaurMovement : MonoBehaviour
     public float speed = 2.0f;
     private Vector3 targetPosition;
 
-    private Animator animator;
-        AudioManager audioManager;
+    private SpriteRenderer spriteRenderer;
+    AudioManager audioManager;
 
     void Awake()
     {
@@ -21,7 +21,8 @@ public class DinosaurMovement : MonoBehaviour
     void Start()
     {
         targetPosition = pointB;
-        animator = GetComponent<Animator>();
+        spriteRenderer = GetComponent<SpriteRenderer>();
+        spriteRenderer.enabled = true;
     }
 
     void Update()
@@ -29,7 +30,15 @@ public class DinosaurMovement : MonoBehaviour
         transform.position = Vector3.MoveTowards(transform.position, targetPosition, speed * Time.deltaTime);
 
         bool MoveRight = targetPosition.x > transform.position.x;
-        animator.SetBool("MoveRight", MoveRight);
+
+        if (targetPosition == pointB)
+        {
+            spriteRenderer.enabled = false;
+        }
+        else
+        {
+            spriteRenderer.enabled = true;
+        }
 
         if (Vector3.Distance(transform.position, targetPosition) < 0.01f)
         {
@@ -47,7 +56,7 @@ public class DinosaurMovement : MonoBehaviour
 
     private void OnTriggerEnter2D(Collider2D other)
     {
-        if (other.CompareTag("Player"))
+        if (other.CompareTag("Player") && spriteRenderer.enabled)
         {
             Debug.Log("Player Hit! Starting Restart Process.");
             StartCoroutine(DeathRoutine());
