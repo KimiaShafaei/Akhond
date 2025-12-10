@@ -655,6 +655,10 @@ PrefabInstance:
       propertyPath: Loop
       value: 1
       objectReference: {fileID: 0}
+    - target: {fileID: 4617082227215252366, guid: b5c4cf558e9a44bf5a15526739e7c427, type: 3}
+      propertyPath: m_Volume
+      value: 0.5
+      objectReference: {fileID: 0}
     - target: {fileID: 7789728402704968713, guid: b5c4cf558e9a44bf5a15526739e7c427, type: 3}
       propertyPath: m_Name
       value: Audio Manager
@@ -687,6 +691,10 @@ PrefabInstance:
       propertyPath: ShrineActivate
       value: 
       objectReference: {fileID: 8300000, guid: 01e1941f4a40045c1a1c55f8eeacef0f, type: 3}
+    - target: {fileID: 8769216785937829743, guid: b5c4cf558e9a44bf5a15526739e7c427, type: 3}
+      propertyPath: BackgroundMusic
+      value: 
+      objectReference: {fileID: 8300000, guid: 87b28e9ef39e94cdcb35bfc274726c04, type: 3}
     - target: {fileID: 8769216785937829743, guid: b5c4cf558e9a44bf5a15526739e7c427, type: 3}
       propertyPath: ButtonActivatePower
       value: 
